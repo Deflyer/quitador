@@ -195,43 +195,29 @@ chmod +x setup.sh
 - **Múltiplas Opções**: Comparação detalhada de custos
 - **Pagamento Parcial**: Otimização inteligente de recursos
 
-## 🏆 Diferenciais do Projeto
-
-### 🤖 Inteligência Artificial Avançada
-- **NLP Contextual**: Entende intenções complexas
-- **Geração Conversacional**: Respostas naturais e personalizadas
-- **Análise Financeira**: Estratégias baseadas em dados reais
-
-### 🎨 Interface Inovadora
-- **Design WhatsApp**: Familiar e intuitivo
-- **Mobile-First**: Otimizado para dispositivos móveis
-- **UX Conversacional**: Fluxo natural de conversação
-
-### 💼 Solução Empresarial
-- **Escalabilidade**: Arquitetura modular
-- **Integração**: APIs preparadas para sistemas reais
-- **Personalização**: Adaptável a diferentes segmentos
 
 ## 👥 Equipe RAIA
 
-<div align="center">
 
-| Membro | Função |
-|--------|--------|
-| **Artur De Vlieger Lima** | Desenvolvimento Backend & IA |
-| **Beatriz Lomes da Silva** | Desenvolvimento Frontend & UX |
-| **Lucas de Souza Brandão** | Análise Financeira & Dados |
-| **Pedro Augusto Monteiro Delgado** | Integração & DevOps |
 
-</div>
+Membros
+**Artur De Vlieger Lima**
+**Beatriz Lomes da Silva** 
+**Lucas de Souza Brandão** 
+**Pedro Augusto Monteiro Delgado**
 
-## 📞 Suporte e Contato
 
-Para dúvidas sobre o projeto ou colaborações:
+## Demonstração 
 
-- **Email**: [contato@equiperaia.com]
-- **GitHub**: [@equiperaia]
-- **LinkedIn**: [Equipe RAIA]
+
+
+
+
+
+https://github.com/user-attachments/assets/2741b295-0424-4aa5-809a-767027bb6251
+
+
+
 
 ## 📄 Licença
 
