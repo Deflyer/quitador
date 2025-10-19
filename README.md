@@ -1,5 +1,8 @@
 # 💰 Quitador - Assistente Financeiro BTG
 
+
+<img width="625" height="467" alt="image" src="https://github.com/user-attachments/assets/65ef794a-cf8e-4b79-b345-4976e43fa1f1" />
+
 <div align="center">
   <img src="https://img.shields.io/badge/Python-3.12+-blue.svg" alt="Python Version">
   <img src="https://img.shields.io/badge/Flask-2.0+-green.svg" alt="Flask Version">
@@ -41,7 +44,7 @@ Pagamento - BTG/
 │   └── requirements.txt       # Dependências Python
 ├── DDA/                       # Módulo de consulta de boletos
 │   ├── queries_dda.py         # Funções de consulta
-│   └── dda.json              # Base de dados de boletos
+│   └── dda.json              # Mock de base de dados de boletos
 ├── Sugestao-acao/             # Módulo de análise financeira
 │   ├── financial_tools_simple.py # Ferramentas financeiras
 │   ├── crew.py               # Configuração CrewAI
