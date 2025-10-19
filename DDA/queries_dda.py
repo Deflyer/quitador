@@ -1,12 +1,15 @@
 import json
 import pandas as pd
+import os
 
 def boletos_do_dia(df, cnpj, dia):
     dia = pd.to_datetime(dia)
+    hoje = pd.Timestamp.now().normalize()  # Data atual (hoje)
     df_cnpj = df[df['cnpj'] == cnpj]
     
     boletos_hoje = df_cnpj[df_cnpj['data_vencimento'] == dia].copy()
-    vencidos = df_cnpj[df_cnpj['data_vencimento'] < dia].copy()
+    # Vencidos são sempre relativos à data ATUAL, não à data consultada
+    vencidos = df_cnpj[df_cnpj['data_vencimento'] < hoje].copy()
     
     # Criar coluna formatada apenas para saída
     boletos_hoje['data_str'] = boletos_hoje['data_vencimento'].dt.strftime('%Y-%m-%d')
@@ -27,6 +30,7 @@ def boletos_do_dia(df, cnpj, dia):
         juros_acumulado = 0  # ou calcular depois
         boletos_dict[codigo] = {
             "empresa": row['cnpj'],
+            "beneficiario": row.get('beneficiario', 'Não informado'),
             "valor": row['valor'],
             "juros": juros_acumulado,
             "data_vencimento": row['data_str']  # aqui usamos a string
@@ -86,8 +90,8 @@ def dash_intervalo(df, cnpj, data_inicio, data_fim):
     # Dias com maior valor total
     valor_por_dia = df_periodo.groupby('data_vencimento_str')['valor'].sum().sort_values(ascending=False).head(3)
     
-    # Contas atrasadas
-    hoje = pd.Timestamp("2025-10-19")  # default
+    # Contas atrasadas - sempre usa data ATUAL, não a data do intervalo
+    hoje = pd.Timestamp.now().normalize()
     atrasadas = df_cnpj[df_cnpj['data_vencimento'] < hoje].copy()
     atrasadas.loc[:, 'data_vencimento_str'] = atrasadas['data_vencimento'].dt.strftime('%Y-%m-%d')
     
@@ -110,8 +114,13 @@ def dash_intervalo(df, cnpj, data_inicio, data_fim):
     return dashboard
 
 
-def boletos_atrasados(df, cnpj, referencia='2025-10-19'):
-    hoje = pd.to_datetime(referencia)
+def boletos_atrasados(df, cnpj, referencia=None):
+    # Se referencia não for fornecida, usa a data atual
+    if referencia is None:
+        hoje = pd.Timestamp.now().normalize()
+    else:
+        hoje = pd.to_datetime(referencia)
+    
     df_cnpj = df[df['cnpj'] == cnpj]
     atrasados = df_cnpj[df_cnpj['data_vencimento'] < hoje].copy()  # copy aqui
     
@@ -133,8 +142,17 @@ def sistema_boletos(acao, **kwargs):
     - "dash_intervalo" -> chama dash_intervalo(df, cnpj, data_inicio, data_fim)
     - "atrasados" -> chama boletos_atrasados(df, cnpj, referencia)
     """
-
-    with open("dda.json", "r", encoding="utf-8") as f:
+    
+    # Permite especificar um caminho customizado para o JSON
+    json_path = kwargs.get('dda_json_path', 'dda.json')
+    
+    # Se o caminho não for absoluto, tenta encontrar relativo ao diretório atual
+    if not os.path.isabs(json_path) and not os.path.exists(json_path):
+        # Tenta encontrar relativo ao diretório deste arquivo
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        json_path = os.path.join(current_dir, 'dda.json')
+    
+    with open(json_path, "r", encoding="utf-8") as f:
         json_data = json.load(f)
 
     # 2. Extrair a lista de boletos (array dentro de "data")
@@ -155,7 +173,7 @@ def sistema_boletos(acao, **kwargs):
             return dash_intervalo(df, kwargs['cnpj'], kwargs['data_inicio'], kwargs['data_fim'])
         
         case "atrasados":
-            referencia = kwargs.get('referencia', '2025-10-19')  # default para hoje
+            referencia = kwargs.get('referencia')  # None se não fornecido, usa data atual
             return boletos_atrasados(df, kwargs['cnpj'], referencia)
         
         case _:

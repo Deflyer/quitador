@@ -1,0 +1,34 @@
+# Framework Web
+Flask==3.0.0
+Werkzeug==3.0.1
+
+# Build tools (necessário para CrewAI)
+setuptools>=65.0.0
+wheel>=0.38.0
+
+# Processamento de Dados
+pandas==2.1.4
+numpy==1.26.2
+
+# CrewAI e dependências de IA
+crewai==0.28.8
+crewai-tools==0.1.6
+langchain>=0.1.10,<0.2.0
+langchain-openai>=0.0.2
+openai>=1.6.1
+
+# Banco de dados (necessário para CrewAI)
+pysqlite3-binary>=0.5.2
+
+# Variáveis de ambiente
+python-dotenv==1.0.0
+
+# YAML
+PyYAML==6.0.1
+
+# Pydantic (para validação de dados)
+pydantic>=2.6.1,<3.0.0
+
+# Utilitários
+requests==2.31.0
+

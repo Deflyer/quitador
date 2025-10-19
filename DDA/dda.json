@@ -3,6 +3,7 @@
     {
       "id": "BOL001",
       "cnpj": "12.345.678/0001-90",
+      "beneficiario": "Atacado Moda Brasil",
       "valor": 1500.00,
       "data_vencimento": "2025-10-10",
       "multa": 0.02,
@@ -11,6 +12,7 @@
     {
       "id": "BOL002",
       "cnpj": "12.345.678/0001-90",
+      "beneficiario": "Energia Elétrica - Loja",
       "valor": 3200.50,
       "data_vencimento": "2025-10-19",
       "multa": 0.025,
@@ -19,6 +21,7 @@
     {
       "id": "BOL003",
       "cnpj": "12.345.678/0001-90",
+      "beneficiario": "Telefone e Internet",
       "valor": 750.75,
       "data_vencimento": "2025-10-25",
       "multa": 0.02,
@@ -27,6 +30,7 @@
     {
       "id": "BOL004",
       "cnpj": "12.345.678/0001-90",
+      "beneficiario": "Embalagens e Sacolas",
       "valor": 490.00,
       "data_vencimento": "2025-09-30",
       "multa": 0.015,
@@ -35,6 +39,7 @@
     {
       "id": "BOL005",
       "cnpj": "12.345.678/0001-90",
+      "beneficiario": "Água - Consumo Loja",
       "valor": 1020.00,
       "data_vencimento": "2025-10-20",
       "multa": 0.02,
@@ -43,6 +48,7 @@
     {
       "id": "BOL006",
       "cnpj": "12.345.678/0001-90",
+      "beneficiario": "Aluguel da Loja",
       "valor": 2850.00,
       "data_vencimento": "2025-11-05",
       "multa": 0.025,
@@ -51,6 +57,7 @@
     {
       "id": "BOL007",
       "cnpj": "12.345.678/0001-90",
+      "beneficiario": "Confecções Bela Vista",
       "valor": 5000.00,
       "data_vencimento": "2025-10-15",
       "multa": 0.02,
@@ -59,6 +66,7 @@
     {
       "id": "BOL008",
       "cnpj": "12.345.678/0001-90",
+      "beneficiario": "Limpeza da Loja",
       "valor": 150.00,
       "data_vencimento": "2025-10-28",
       "multa": 0.02,
@@ -67,6 +75,7 @@
     {
       "id": "BOL009",
       "cnpj": "12.345.678/0001-90",
+      "beneficiario": "Manutenção Ar Condicionado",
       "valor": 980.25,
       "data_vencimento": "2025-10-18",
       "multa": 0.025,
@@ -75,6 +84,7 @@
     {
       "id": "BOL010",
       "cnpj": "12.345.678/0001-90",
+      "beneficiario": "Sistema PDV e Etiquetas",
       "valor": 1230.50,
       "data_vencimento": "2025-11-01",
       "multa": 0.02,
@@ -83,6 +93,7 @@
     {
       "id": "BOL011",
       "cnpj": "12.345.678/0001-90",
+      "beneficiario": "Fornecedor Tecidos e Aviamentos",
       "valor": 1800.00,
       "data_vencimento": "2025-10-12",
       "multa": 0.02,
@@ -91,6 +102,7 @@
     {
       "id": "BOL012",
       "cnpj": "12.345.678/0001-90",
+      "beneficiario": "Manequins e Displays",
       "valor": 2750.75,
       "data_vencimento": "2025-10-22",
       "multa": 0.025,
@@ -99,6 +111,7 @@
     {
       "id": "BOL013",
       "cnpj": "12.345.678/0001-90",
+      "beneficiario": "Seguro da Loja",
       "valor": 600.00,
       "data_vencimento": "2025-10-17",
       "multa": 0.02,
@@ -107,6 +120,7 @@
     {
       "id": "BOL014",
       "cnpj": "12.345.678/0001-90",
+      "beneficiario": "Marketing e Redes Sociais",
       "valor": 4500.50,
       "data_vencimento": "2025-10-30",
       "multa": 0.025,
@@ -115,6 +129,7 @@
     {
       "id": "BOL015",
       "cnpj": "12.345.678/0001-90",
+      "beneficiario": "Transportadora de Roupas",
       "valor": 890.00,
       "data_vencimento": "2025-10-21",
       "multa": 0.02,

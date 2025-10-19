@@ -1,8 +1,23 @@
 import json
 import os
-from typing import Type
-from crewai.tools import BaseTool
+from typing import Type, Optional
 from pydantic import BaseModel, Field
+
+# Tenta importar BaseTool de diferentes localizações (compatibilidade com versões)
+try:
+    from crewai.tools import BaseTool
+except ImportError:
+    try:
+        from crewai_tools import BaseTool
+    except ImportError:
+        # Fallback: criar uma classe base simples
+        class BaseTool:
+            name: str = ""
+            description: str = ""
+            args_schema: Optional[Type[BaseModel]] = None
+            
+            def _run(self, **kwargs):
+                raise NotImplementedError()
 
 # Definições de custos de financiamento
 TAXA_CAPITAL_GIRO = 0.08  # 8% total do valor financiado
