@@ -1,0 +1,22 @@
+[
+    {
+        "codigo": "B001",
+        "valor": 10000.00,
+        "juros_diario": 0.005
+    },
+    {
+        "codigo": "B002",
+        "valor": 50000.00,
+        "juros_diario": 0.002
+    },
+    {
+        "codigo": "B003",
+        "valor": 20000.00,
+        "juros_diario": 0.008
+    },
+    {
+        "codigo": "B004",
+        "valor": 5000.00,
+        "juros_diario": 0.001
+    }
+]

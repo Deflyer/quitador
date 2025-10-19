@@ -1,0 +1,11 @@
+debt_analysis_task:
+  description: |
+    Com um SALDO DE CAIXA de R$35.000,00, use a ferramenta 'Bill Payment Optimization Planner' 
+    com o caminho do arquivo 'boletos.json' e o saldo para gerar um plano de pagamento 
+    otimizado que minimize os custos totais (juros + financiamento).
+  expected_output: |
+    Um relatório detalhado de fluxo de caixa e pagamento, listando quais boletos devem ser pagos 
+    com saldo, quais devem ser financiados (indicando a melhor opção: Capital de Giro ou Adiantamento), 
+    e a justificativa baseada na minimização de custos.
+
+    
